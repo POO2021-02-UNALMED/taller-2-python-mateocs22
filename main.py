@@ -4,7 +4,7 @@ class Asiento:
         self.precio = precio
         self.registro = registro
 
-    def cambiarColorL(self, color):
+    def cambiarColor(self, color):
         if(color in ("rojo", "verde", "amarillo", "negro", "blanco")):
             self.color= color
 
@@ -43,7 +43,7 @@ class Motor:
         self.tipo= tipo
         self.registro= registro
 
-    def CambiarRegistro(self, registro):
+    def cambiarRegistro(self, registro):
         self.registro= registro
 
     def asignarTipo(self, tipo):
