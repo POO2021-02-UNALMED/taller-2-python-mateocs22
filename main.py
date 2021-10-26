@@ -22,7 +22,7 @@ class Auto:
     def cantidadAsientos(self):
             c= 0
             for i in self.asientos:
-                if type(i) == type(Asiento):
+                if i != None:
                     c += 1 
             return c
 
@@ -49,3 +49,16 @@ class Motor:
     def asignarTipo(self, tipo):
         if tipo in ("electrico", "normal"):
             self.tipo= tipo
+
+
+if __name__ == "__main__":
+    a = Auto("model 3", 33000, list(),"tesla", Motor(4, "electrico", 142), 341)
+    
+    a.asientos = [Asiento("blanco", 5000, 435),None, None, Asiento("blanco", 5000, 435), None]
+    
+    ok = False
+    
+    if(a.cantidadAsientos() == 2):
+        ok = True
+
+    print(ok)    
